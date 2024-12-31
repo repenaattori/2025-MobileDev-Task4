@@ -1,0 +1,8 @@
+## Install dependencies
+npm install
+
+## Run tests to check if the answer is correct
+npm test
+
+## Task
+Your task is to change between login and register forms when the switch is toggled. Create the register form components by reusing FormInput component and show them using conditional rendering (changed by switch). The result should look like in the image RegisterExample.png
