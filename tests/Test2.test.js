@@ -6,13 +6,13 @@ describe('Test2', () => {
     it('Check the button texts when toggling', () => {
         render(<App/>);
 
-        expect(screen.getByText('LOGIN')).toBeOnTheScreen();
-        expect(screen.getByText('REGISTER')).not.toBeOnTheScreen();
+        expect(screen.queryByText('LOGIN')).toBeOnTheScreen();
+        expect(screen.queryByText('REGISTER')).not.toBeOnTheScreen();
     
         fireEvent(screen.getByTestId('switch'), 'onValueChange', true);
 
-        expect(screen.getByText('REGISTER')).toBeOnTheScreen();
-        expect(screen.getByText('LOGIN')).not.toBeOnTheScreen();
+        expect(screen.queryByText('REGISTER')).toBeOnTheScreen();
+        expect(screen.queryByText('LOGIN')).not.toBeOnTheScreen();
     });
 });
 
